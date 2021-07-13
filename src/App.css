@@ -1,38 +1,38 @@
-.App {
-  text-align: center;
+.Parentbox{
+  width: 80%;
+  overflow: hidden;
+  margin :auto;
+  margin-top: 100px;
+
+}
+.Foto{
+  float:left;
+  width: 50%;
+  height: 700px;
+  background:white;
+}
+.Foto img {
+  width: 100%;
+}
+.Deskripsi {
+  width: 40%;
+  overflow: hidden;
+  float: left;
+  margin-left: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.Deskripsi .Info{
+  line-height: 20px;
+  color: black;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Deskripsi .Price{
+  font-size: 20px;
+  font-weight: 500;
 }
-
-.App-link {
-  color: #61dafb;
+.Deskripsi .Title{
+  margin: 0;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Deskripsi .Coffe{
+  color: bisque;
 }
