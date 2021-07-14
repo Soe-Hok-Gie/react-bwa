@@ -35,6 +35,8 @@ function ProdukInfo (props){
   <p className="Price">IDR 7.300.000.00</p>
   <p className="Info">Kopi merupakan salah satu komoditas di dunia yang dibudidayakan lebih dari 50 negara. 
   Dua spesies pohon kopi yang dikenal secara umum yaitu Kopi Robusta (Coffea canephora) dan Kopi Arabika (Coffea arabica).</p>              
+  
+  <a href="#"> add to cart</a>
   </div>
   </div>
   );
