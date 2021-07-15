@@ -16,6 +16,21 @@ function App() {
   );
 }
 
+//mengecek diskon
+function CheckDiscount(props) {
+  const {isDiscount} = props; 
+  if(isDiscount){
+    return(
+      <p>Diskon 50% OFF</p>
+    );
+  }
+  else {
+    return(
+      <p>Belum ada Diskon</p>
+    );
+  }
+}
+
 function FotoProduk (){
   return (
 
