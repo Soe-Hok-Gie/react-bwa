@@ -8,8 +8,8 @@ function App() {
   return (
     <div className="Parentbox">
       <FotoProduk/>
-      <ProdukInfo name="Coffe Arabika"category="hadiah"/>
-    
+      <ProdukInfo  isDiscount="coming" name="Coffe Arabika"category="hadiah"/>
+
      {/* {userLogged}
      {userLoggedJsx} */}
     </div>
@@ -19,11 +19,16 @@ function App() {
 //mengecek diskon
 function CheckDiscount(props) {
   const {isDiscount} = props; 
-  if(isDiscount){
+  if(isDiscount =="yes" ){
     return(
       <p>Diskon 50% OFF</p>
     );
-  }
+  } 
+  else if(isDiscount == "coming"){
+    return(
+      <p>akan ada Diskon .... </p>
+    );
+  } 
   else {
     return(
       <p>Belum ada Diskon</p>
@@ -41,13 +46,14 @@ function FotoProduk (){
 }
 
 function ProdukInfo (props){
-  const {category, name }=props;
+  const {category, name, isDiscount}=props;
   return (
   <div>
   <div className="Deskripsi">
   <p className="Coffe">{category}</p>
   <h1 className="Title"> {name} </h1>
   <p className="Price">IDR 7.300.000.00</p>
+  <CheckDiscount isDiscount={isDiscount}/>
   <p className="Info">Kopi merupakan salah satu komoditas di dunia yang dibudidayakan lebih dari 50 negara. 
   Dua spesies pohon kopi yang dikenal secara umum yaitu Kopi Robusta (Coffea canephora) dan Kopi Arabika (Coffea arabica).</p>              
   
