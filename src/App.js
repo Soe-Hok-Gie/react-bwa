@@ -47,19 +47,27 @@ function FotoProduk (){
 
 function ProdukInfo (props){
   const {category, name, isDiscount}=props;
+  const benefits = ["tidak kusut terkena air", "bahan langsung dari petani","juga eksportir ke asia timur"]
+  const listBenefits =benefits.map((itemBenefits) =>
+  <li>{itemBenefits}</li>
+  );
   return (
   <div>
-  <div className="Deskripsi">
-  <p className="Coffe">{category}</p>
-  <h1 className="Title"> {name} </h1>
-  <p className="Price">IDR 7.300.000.00</p>
-  <CheckDiscount isDiscount={isDiscount}/>
-  <p className="Info">Kopi merupakan salah satu komoditas di dunia yang dibudidayakan lebih dari 50 negara. 
-  Dua spesies pohon kopi yang dikenal secara umum yaitu Kopi Robusta (Coffea canephora) dan Kopi Arabika (Coffea arabica).</p>              
+    <div className="Deskripsi">
+      <p className="Coffe">{category}</p>
+      <h1 className="Title"> {name} </h1>
+      <p className="Price">IDR 7.300.000.00</p>
+      <CheckDiscount isDiscount={isDiscount}/>
+      <p className="Info">Kopi merupakan salah satu komoditas di dunia yang dibudidayakan lebih dari 50 negara. 
+          Dua spesies pohon kopi yang dikenal secara umum yaitu Kopi Robusta (Coffea canephora) dan Kopi Arabika (Coffea arabica).
+     </p>
+      <ul>
+        {listBenefits}
+      </ul>                  
   
   {/* <a onMouseOver={TambahCart} href="#"> add to cart</a> //menampilkan data secara statis */}
-  <a onClick={(e) =>TambahCart (name, e)} href="#"> add to cart</a>
-  </div>
+      <a onClick={(e) =>TambahCart (name, e)} href="#"> add to cart</a>
+     </div>
   </div>
   );
 }
