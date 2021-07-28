@@ -55,3 +55,14 @@
   background: rgb (221, 135, 135);
   transition: all 0.8s;
 }
+
+.Review-box{
+  clear: both;
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 100%;
+}
+
+.Review-box h2{
+  margin-top: 50px;
+}
