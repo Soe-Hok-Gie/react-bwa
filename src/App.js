@@ -29,6 +29,20 @@ function App() {
   );
 }
 
+function ReviewItem() {
+  //mempersiapkan data dummy Json
+
+  const users = [
+    {
+      "id" :1,
+      "name" :"amat",
+      "review" : "harganya terjangkau":
+    }
+  ];
+  
+};
+
+
 //mengecek diskon
 function CheckDiscount(props) {
   const {isDiscount} = props; 
