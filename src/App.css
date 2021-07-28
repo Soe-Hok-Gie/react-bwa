@@ -66,3 +66,12 @@
 .Review-box h2{
   margin-top: 50px;
 }
+
+.Review-box img{
+  width: 80px;
+  height: 80px;
+  background: #b1b1b1;
+  border-radius: 11px;
+  float: left;
+  margin-right: 16px;
+}
