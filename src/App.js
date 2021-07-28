@@ -10,6 +10,19 @@ function App() {
       <FotoProduk/>
       <ProdukInfo  isDiscount="coming" name="Coffe Arabika"category="hadiah"/>
 
+  <div className="Review-box">
+    <h2>Review</h2>
+    <div className="item">
+      <img src="https://images.pexels.com/photos/6998463/pexels-photo-6998463.jpeg?cs=srgb&dl=pexels-monstera-6998463.jpg&fm=jpg"/>
+      <div className="user">
+        <h3>amat </h3>
+        <p>harganya terjangkau</p>
+       </div>
+      </div>
+    </div>
+ 
+
+
      {/* {userLogged}
      {userLoggedJsx} */}
     </div>
@@ -48,8 +61,8 @@ function FotoProduk (){
 function ProdukInfo (props){
   const {category, name, isDiscount}=props;
   const benefits = ["tidak kusut terkena air", "bahan langsung dari petani","juga eksportir ke asia timur"]
-  const listBenefits =benefits.map((itemBenefits) =>
-  <li>{itemBenefits}</li>
+  const listBenefits =benefits.map((x) =>
+  <li>{x}</li>
   );
   return (
   <div>
