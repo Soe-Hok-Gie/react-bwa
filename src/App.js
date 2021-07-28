@@ -13,7 +13,7 @@ function App() {
   <div className="Review-box">
     <h2>Review</h2>
     <div className="item">
-      <img src="https://images.pexels.com/photos/6998463/pexels-photo-6998463.jpeg?cs=srgb&dl=pexels-monstera-6998463.jpg&fm=jpg"/>
+      <img src="https://images.pexels.com/photos/4613045/pexels-photo-4613045.jpeg?cs=srgb&dl=pexels-aphotox-4613045.jpg&fm=jpg"/>
       <div className="user">
         <h3>amat </h3>
         <p>harganya terjangkau</p>
