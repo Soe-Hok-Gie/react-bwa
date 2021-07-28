@@ -36,11 +36,21 @@ function ReviewItem() {
     {
       "id" :1,
       "name" :"amat",
-      "review" : "harganya terjangkau":
+      "review" : "harganya terjangkau"
+    },
+    {
+      "id" :2,
+      "name" :"amin",
+      "review" : "harganya terjangkau"
+    },
+    {
+      "id" :3,
+      "name" :"ilham",
+      "review" : "harganya terjangkau"
     }
   ];
   
-};
+}
 
 
 //mengecek diskon
