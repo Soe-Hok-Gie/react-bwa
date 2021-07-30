@@ -9,19 +9,7 @@ function App() {
     <div className="Parentbox">
       <FotoProduk/>
       <ProdukInfo  isDiscount="coming" name="Coffe Arabika"category="hadiah"/>
-
-  <div className="Review-box">
-    <h2>Review</h2>
-    <div className="item">
-      <img src="https://images.pexels.com/photos/4613045/pexels-photo-4613045.jpeg?cs=srgb&dl=pexels-aphotox-4613045.jpg&fm=jpg"/>
-      <div className="user">
-        <h3>amat </h3>
-        <p>harganya terjangkau</p>
-       </div>
-      </div>
-    </div>
- 
-
+      <ReviewItem/>
 
      {/* {userLogged}
      {userLoggedJsx} */}
@@ -39,17 +27,34 @@ function ReviewItem() {
       "review" : "harganya terjangkau"
     },
     {
+
       "id" :2,
       "name" :"amin",
-      "review" : "harganya terjangkau"
+      "review" : "kualitasnya bagus"
     },
     {
       "id" :3,
       "name" :"ilham",
-      "review" : "harganya terjangkau"
+      "review" : "bungkusannya rapi"
     }
   ];
   
+  const listReview =users.map((itemReview) =>
+  
+    <div className="item">
+      <img src="https://images.pexels.com/photos/4613045/pexels-photo-4613045.jpeg?cs=srgb&dl=pexels-aphotox-4613045.jpg&fm=jpg"/>
+      <div className="user">
+        <h3>{itemReview.name} </h3>
+        <p>{itemReview.review}</p>
+      </div>
+    </div>
+  );
+  return (
+    <div className="Review-box">
+      <h2>Review</h2>
+      {listReview}
+    </div>
+  );
 }
 
 
