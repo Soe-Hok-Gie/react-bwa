@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from './logo.svg';
 import './App.css';
+import ReviewItem from './Reviews';
 
 function App() {
   // const userLogged ="Fadil"
@@ -16,56 +17,6 @@ function App() {
     </div>
   );
 }
-
-function ReviewItem() {
-  //mempersiapkan data dummy Json
-
-  const users = [
-    {
-      "id" :1,
-      "name" :"amat",
-      "review" : "harganya terjangkau",
-      "photo" : "https://images.pexels.com/photos/4013911/pexels-photo-4013911.jpeg?cs=srgb&dl=pexels-ramphoko-mahula-4013911.jpg&fm=jpg"
-    },
-    {
-
-      "id" :2,
-      "name" :"wanda",
-      "review" : "kualitasnya bagus",
-      "photo" : "https://images.pexels.com/photos/5721335/pexels-photo-5721335.jpeg?cs=srgb&dl=pexels-anete-lusina-5721335.jpg&fm=jpg"
-    },
-    {
-      "id" :3,
-      "name" :"kindi",
-      "review" : "bungkusannya rapi",
-      "photo" : "https://images.pexels.com/photos/3805873/pexels-photo-3805873.jpeg?cs=srgb&dl=pexels-k-makhasette-3805873.jpg&fm=jpg"
-    },
-    {
-      "id" :4,
-      "name" :"ANJING",
-      "review" : "bacot lu babi",
-      "photo" : "https://images.pexels.com/photos/1933873/pexels-photo-1933873.jpeg?cs=srgb&dl=pexels-thgusstavo-santana-1933873.jpg&fm=jpg"
-    }
-  ];
-  
-  const listReview =users.map((itemReview) =>
-  
-    <div className="Item">
-      <img src={itemReview.photo}/>
-      <div className="user">
-        <h3>{itemReview.name} </h3>
-        <p>{itemReview.review}</p>
-      </div>
-    </div>
-  );
-  return (
-    <div className="Review-box">
-      <h2>Review</h2>
-      {listReview}
-    </div>
-  );
-}
-
 
 //mengecek diskon
 function CheckDiscount(props) {
