@@ -24,25 +24,34 @@ function ReviewItem() {
     {
       "id" :1,
       "name" :"amat",
-      "review" : "harganya terjangkau"
+      "review" : "harganya terjangkau",
+      "photo" : "https://images.pexels.com/photos/4013911/pexels-photo-4013911.jpeg?cs=srgb&dl=pexels-ramphoko-mahula-4013911.jpg&fm=jpg"
     },
     {
 
       "id" :2,
-      "name" :"amin",
-      "review" : "kualitasnya bagus"
+      "name" :"wanda",
+      "review" : "kualitasnya bagus",
+      "photo" : "https://images.pexels.com/photos/5721335/pexels-photo-5721335.jpeg?cs=srgb&dl=pexels-anete-lusina-5721335.jpg&fm=jpg"
     },
     {
       "id" :3,
-      "name" :"ilham",
-      "review" : "bungkusannya rapi"
+      "name" :"kindi",
+      "review" : "bungkusannya rapi",
+      "photo" : "https://images.pexels.com/photos/3805873/pexels-photo-3805873.jpeg?cs=srgb&dl=pexels-k-makhasette-3805873.jpg&fm=jpg"
+    },
+    {
+      "id" :4,
+      "name" :"ANJING",
+      "review" : "bacot lu babi",
+      "photo" : "https://images.pexels.com/photos/1933873/pexels-photo-1933873.jpeg?cs=srgb&dl=pexels-thgusstavo-santana-1933873.jpg&fm=jpg"
     }
   ];
   
   const listReview =users.map((itemReview) =>
   
-    <div className="item">
-      <img src="https://images.pexels.com/photos/4613045/pexels-photo-4613045.jpeg?cs=srgb&dl=pexels-aphotox-4613045.jpg&fm=jpg"/>
+    <div className="Item">
+      <img src={itemReview.photo}/>
       <div className="user">
         <h3>{itemReview.name} </h3>
         <p>{itemReview.review}</p>
