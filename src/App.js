@@ -2,6 +2,7 @@ import React from 'react'
 import logo from './logo.svg';
 import './App.css';
 import ReviewItem from './Reviews';
+import PropTypes from 'prop-types';//untuk mengecek nilai apa yang dibutuhkan ketika mempersiapkan API oleh Developer
 
 function App() {
   // const userLogged ="Fadil"
@@ -9,7 +10,7 @@ function App() {
   return (
     <div className="Parentbox">
       <FotoProduk/>
-      <ProdukInfo  isDiscount="coming" name="Coffe Arabika"category="hadiah"/>
+      <ProdukInfo  isDiscount="yes" name=" Biji Coffe"category="Coffe"/>
       <ReviewItem/>
 
      {/* {userLogged}
@@ -20,10 +21,10 @@ function App() {
 
 //mengecek diskon
 function CheckDiscount(props) {
-  const {isDiscount} = props; 
+  const {isDiscount, discount} = props; 
   if(isDiscount =="yes" ){
     return(
-      <p>Diskon 50% OFF</p>
+      <p> {discount}% OFF</p>
     );
   } 
   else if(isDiscount == "coming"){
@@ -51,15 +52,15 @@ function ProdukInfo (props){
   const {category, name, isDiscount}=props;
   const benefits = ["tidak kusut terkena air", "bahan langsung dari petani","juga eksportir ke asia timur"]
   const listBenefits =benefits.map((x) =>
-  <li>{x}</li>
+  <li key={x}>{x}</li>
   );
   return (
   <div>
     <div className="Deskripsi">
       <p className="Coffe">{category}</p>
       <h1 className="Title"> {name} </h1>
-      <p className="Price">IDR 7.300.000.00</p>
-      <CheckDiscount isDiscount={isDiscount}/>
+      <p className="Price">IDR 7.000.000.00</p>
+      <CheckDiscount isDiscount={isDiscount} discount={20}/>
       <p className="Info">Kopi merupakan salah satu komoditas di dunia yang dibudidayakan lebih dari 50 negara. 
           Dua spesies pohon kopi yang dikenal secara umum yaitu Kopi Robusta (Coffea canephora) dan Kopi Arabika (Coffea arabica).
      </p>
@@ -77,5 +78,10 @@ function ProdukInfo (props){
 function TambahCart (e){
   return console.log("menambah produk...." + e);
 }
+
+CheckDiscount.propTypes ={
+  discount: PropTypes.number.isRequired
+
+};
 
 export default App;
